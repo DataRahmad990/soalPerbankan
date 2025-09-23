@@ -3,19 +3,84 @@
 
 const questions = [
     // SOAL VERSI 1
-    { id: 1, version: 1, category: "Pemeriksaan", question: "Dokumen yang bukan merupakan bagian output dari proses pemeriksaan berdasarkan risiko adalah", options: ["Perencanaan Pengawasan", "Risalah Exit Meeting", "Audit Working Plan", "Laporan Hasil Pemeriksaan"], answer: "Audit Working Plan", explanation: "Audit Working Plan adalah dokumen input atau perencanaan, bukan output dari proses pemeriksaan. Outputnya adalah Risalah, LHP, dan Perencanaan Pengawasan untuk siklus berikutnya." },
+    {
+        "id": 1,
+        "version": 1,
+        "category": "Pemeriksaan",
+        "question": "Dokumen yang bukan merupakan bagian output dari proses pemeriksaan berdasarkan risiko adalah",
+        "options": [
+            "Perencanaan Pengawasan",
+            "Risalah Exit Meeting",
+            "Audit Working Plan",
+            "Laporan Hasil Pemeriksaan"
+        ],
+        "answer": "Perencanaan Pengawasan",
+        "explanation": "Laporan Hasil Pemeriksaan (LHP) dan Risalah Exit Meeting adalah dokumen yang dihasilkan langsung (output) setelah proses pemeriksaan selesai. Audit Working Plan adalah rencana kerja yang merupakan bagian dari pelaksanaan pemeriksaan. Sedangkan, Perencanaan Pengawasan adalah dokumen strategis untuk siklus pengawasan berikutnya dan bukan merupakan output langsung dari satu kegiatan pemeriksaan spesifik."
+    },
     { id: 2, version: 1, category: "Tata Kelola", question: "Yang bukan merupakan cakupan penerapan tata kelola sesuai POJK No.2 tahun 2024 tentang Penerapan Tata Kelola Syariah BUS UUS yaitu:", options: ["Pembatasan masa jabatan anggota DPS", "Kewajiban pengalihan penghasilan yang tidak sesuai dengan prinsip syariah", "Kewajiban pembentukan komite syariah", "Kerangka tata kelola syariah"], answer: "Pembatasan masa jabatan anggota DPS", explanation: "POJK No. 2 Tahun 2024 fokus pada kerangka tata kelola, komite syariah, dan pengelolaan dana non-halal, namun tidak secara spesifik mengatur pembatasan masa jabatan DPS." },
     { id: 3, version: 1, category: "Perkreditan", question: "Sebutkan jenis informasi perkreditan seperti apa yang memiliki nilai tambah?", options: ["Tingkat kolektibilitas", "Peringatan fraud", "Nilai sisa plafon kredit/pembiayaan", "Jumlah fasilitas pinjaman kredit/pembiayaan"], answer: "Peringatan fraud", explanation: "Informasi mengenai peringatan fraud memberikan nilai tambah yang sangat signifikan karena dapat mencegah potensi kerugian besar, melebihi informasi standar lainnya." },
     { id: 4, version: 1, category: "Pengawasan", question: "Salah satu parameter BPR/BPRS ditetapkan dalam status pengawasan BDP adalah", options: ["Cash ratio > 5%", "Rasio KPMM < 5%", "Rasio KPMM < 12%", "Cash ratio < 2%"], answer: "Rasio KPMM < 12%", explanation: "Sesuai POJK 28/2023, BPR/BPRS masuk dalam status Bank Dalam Penyehatan (BDP) jika KPMM-nya berada di bawah 12% namun masih di atas 8%." },
     { id: 5, version: 1, category: "Manajemen Risiko", question: "Di bawah ini yang bukan termasuk dalam komponen penilaian KPMR pada Risiko Likuiditas adalah:", options: ["Penetapan pihak yang independen untuk melakukan pengujian dan validasi model", "Komposisi dari aset, liabilitas, dan transaksi rekening administratif", "Kecukupan pengendalian internal terhadap manajemen risiko likuiditas yang dilakukan oleh risk taking unit", "Teknologi informasi dan infrastruktur pendukung"], answer: "Komposisi dari aset, liabilitas, dan transaksi rekening administratif", explanation: "Komposisi aset dan liabilitas adalah bagian dari profil risiko itu sendiri, bukan komponen penilaian Kualitas Penerapan Manajemen Risiko (KPMR) yang menilai proses dan pengendalian." },
     { id: 6, version: 1, category: "Hukum Perbankan", question: "Pemegang Saham yang sengaja melakukan tindak pidana perbankan, akan dijerat dengan pasal", options: ["Pasal 48 UU Perbankan atau Pasal 62 UU Perbankan Syariah", "Pasal 50A UU Perbankan atau Pasal 65 UU Perbankan Syariah", "Pasal 46 UU Perbankan atau Pasal 59 UU Perbankan Syariah", "Pasal 50 UU Perbankan atau Pasal 64 UU Perbankan Syariah"], answer: "Pasal 50A UU Perbankan atau Pasal 65 UU Perbankan Syariah", explanation: "Pasal 50A UU Perbankan dan Pasal 65 UU Perbankan Syariah secara spesifik mengatur sanksi pidana bagi Pemegang Saham Pengendali yang dengan sengaja menyebabkan bank tidak melaksanakan langkah perbaikan." },
     { id: 7, version: 1, category: "Perizinan", question: "BPR dapat melakukan pembukaan Kantor Cabang jika kondisi keuangan memenuhi persyaratan:", options: ["Memiliki kondisi keuangan dan tingkat kesehatan yang mampu mendukung pengembangan kegiatan usaha BPR dan menyerap kemungkinan timbulnya kerugian usaha.", "Rasio kewajiban penyediaan modal minimum 12% selama enam bulan terakhir.", "Rasio Non-Performing Loan (NPL) gross paling tinggi 5% selama 6 bulan terakhir.", "Tidak dalam keadaan rugi dalam 1 (satu) tahun terakhir."], answer: "Memiliki kondisi keuangan dan tingkat kesehatan yang mampu mendukung pengembangan kegiatan usaha BPR dan menyerap kemungkinan timbulnya kerugian usaha.", explanation: "Ini adalah persyaratan umum yang paling komprehensif, mencakup semua aspek kesehatan keuangan yang diperlukan untuk ekspansi, termasuk permodalan, NPL, dan profitabilitas." },
-    { id: 8, version: 1, category: "Perizinan", question: "Dokumen yang disampaikan pada saat mengajukan permohonan persiapan pencabutan izin usaha BPR antara lain:", options: ["Berita Acara RUPS, rencana penyelesaian kewajiban, pengumuman rencana pembubaran badan hukum", "Laporan keuangan terakhir, laporan dan bukti penyelesaian kewajiban, laporan penghentian kegiatan usaha", "Rencana penyelesaian kewajiban, laporan penghentian kegiatan usaha, laporan penyelesaian seluruh kewajiban", "Berita Acara RUPS, rencana penyelesaian seluruh kewajiban, bukti penyelesaian pajak dan kewajiban lain kepada negara"], answer: "Berita Acara RUPS, rencana penyelesaian kewajiban, pengumuman rencana pembubaran badan hukum", explanation: "Pada tahap persiapan, dokumen yang diperlukan adalah persetujuan RUPS, rencana penyelesaian kewajiban, dan bukti pengumuman kepada publik." },
+    {
+        "id": 8,
+        "version": 1,
+        "category": "Perizinan",
+        "question": "Dokumen yang disampaikan pada saat mengajukan permohonan persiapan pencabutan izin usaha BPR antara lain:",
+        "options": [
+            "Berita Acara RUPS, rencana penyelesaian kewajiban, pengumuman rencana pembubaran badan hukum",
+            "Laporan keuangan terakhir, laporan dan bukti penyelesaian kewajiban, laporan penghentian kegiatan usaha",
+            "Rencana penyelesaian kewajiban, laporan penghentian kegiatan usaha, laporan penyelesaian seluruh kewajiban",
+            "Berita Acara RUPS, rencana penyelesaian seluruh kewajiban, bukti penyelesaian pajak dan kewajiban lain kepada negara"
+        ],
+        "answer": "Berita Acara RUPS, rencana penyelesaian seluruh kewajiban, bukti penyelesaian pajak dan kewajiban lain kepada negara",
+        "explanation": "Pada tahap persiapan pencabutan izin usaha atas permintaan sendiri, BPR harus menunjukkan keseriusan dan kemampuannya untuk menyelesaikan seluruh tanggung jawabnya. Ini dibuktikan dengan persetujuan RUPS, adanya rencana yang jelas untuk menyelesaikan seluruh kewajiban (kepada nasabah, kreditur, dll.), serta bukti penyelesaian kewajiban kepada negara seperti pajak."
+    },
     { id: 9, version: 1, category: "Sistem Informasi", question: "SLIK merupakan singkatan dari:", options: ["Sistem Lacak Informasi Kredit", "Sistem Layanan Informasi Kredit", "Sistem Layanan Informasi Keuangan", "Sistem Layanan Izin Kredit"], answer: "Sistem Layanan Informasi Keuangan", explanation: "SLIK adalah singkatan dari Sistem Layanan Informasi Keuangan. Fungsinya tidak hanya mencakup kredit, tetapi seluruh informasi keuangan debitur." },
     { id: 10, version: 1, category: "Surveilans", question: "Salah satu produk yang digunakan oleh OJK untuk memberikan informasi mengenai persepsi risiko dan proyeksi kondisi makro ekonomi serta kinerja sektor perbankan dalam triwulan mendatang yang telah dilaksanakan sejak TW III 2019 adalah:", options: ["Survei Orientasi Bisnis Perbankan", "Kompilasi Laporan Rencana Bisnis Bank (RBB)", "Market Update Bulanan Perbankan", "Laporan Surveillance Perbankan"], answer: "Survei Orientasi Bisnis Perbankan", explanation: "Survei Orientasi Bisnis Perbankan (SOBP) secara spesifik dirancang untuk menangkap persepsi dan ekspektasi para bankir mengenai kondisi bisnis ke depan." },
-    { id: 11, version: 1, category: "Pengawasan", question: "Faktor dan bobot penilaian TKS BPR dan BPRS yaitu:", options: ["Profil Risiko (25%), Tata Kelola (25%), Rentabilitas (30%), Permodalan (20%)", "Profil Risiko (30%), Tata Kelola (25%), Rentabilitas (30%), Permodalan (15%)", "Profil Risiko (30%), Tata Kelola (25%), Rentabilitas (15%), Permodalan (30%)", "Profil Risiko (25%), Tata Kelola (30%), Rentabilitas (15%), Permodalan (30%)"], answer: "Profil Risiko (30%), Tata Kelola (25%), Rentabilitas (15%), Permodalan (30%)", explanation: "Sesuai ketentuan, bobot penilaian Tingkat Kesehatan BPR/BPRS adalah Profil Risiko (30%), GCG (25%), Rentabilitas (15%), dan Permodalan (30%)." },
-    { id: 12, version: 1, category: "Pemeriksaan", question: "Hal yang perlu diperhatikan dalam penyampaian LHP kepada lembaga lain, sesuai dengan UU P2SK:", options: ["Cakupan Data dan informasi yang disampaikan dapat disesuaikan dengan kebutuhan dan tujuan penyampaian LHP dimaksud.", "Data dan informasi yang disampaikan mengacu pada hasil pemeriksaan terakhir", "Semua benar", "Terdapat permintaan dari lembaga lain atau kewajiban untuk menyampaikannya sesuai amanat peraturan perundang-undangan"], answer: "Semua benar", explanation: "Penyampaian LHP ke lembaga lain harus didasari permintaan resmi, menggunakan data terakhir, dan cakupannya disesuaikan dengan kebutuhan lembaga peminta." },
-    { id: 13, version: 1, category: "Regulasi", question: "POJK terbaru terkait konsolidasi BPR/BPRS adalah", options: ["POJK Nomor 7 Tahun 2024", "POJK Nomor 8 Tahun 2024", "POJK Nomor 9 Tahun 2024", "POJK Nomor 10 Tahun 2024"], answer: "POJK Nomor 7 Tahun 2024", explanation: "POJK Nomor 7 Tahun 2024 adalah peraturan terbaru yang secara khusus mengatur tentang Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah, termasuk di dalamnya ketentuan mengenai konsolidasi." },
+    {
+        "id": 11,
+        "version": 1,
+        "category": "Pengawasan",
+        "question": "Faktor dan bobot penilaian TKS BPR dan BPRS yaitu:",
+        "options": [
+            "Profil Risiko (25%), Tata Kelola (25%), Rentabilitas (30%), Permodalan (20%)",
+            "Profil Risiko (30%), Tata Kelola (25%), Rentabilitas (30%), Permodalan (15%)",
+            "Profil Risiko (30%), Tata Kelola (25%), Rentabilitas (15%), Permodalan (30%)",
+            "Profil Risiko (25%), Tata Kelola (30%), Rentabilitas (15%), Permodalan (30%)"
+        ],
+        "answer": "Profil Risiko (25%), Tata Kelola (30%), Rentabilitas (15%), Permodalan (30%)",
+        "explanation": "Sesuai ketentuan OJK yang berlaku mengenai Penilaian Tingkat Kesehatan Bank Perekonomian Rakyat, bobot untuk setiap faktor penilaian adalah: Profil Risiko (25%), Tata Kelola Perusahaan yang Baik/GCG (30%), Rentabilitas (15%), dan Permodalan (30%)."
+    },
+    {
+        "id": 12,
+        "version": 1,
+        "category": "Pemeriksaan",
+        "question": "Hal yang perlu diperhatikan dalam penyampaian LHP kepada lembaga lain, sesuai dengan UU P2SK:",
+        "options": [
+            "Cakupan Data dan informasi yang disampaikan dapat disesuaikan dengan kebutuhan dan tujuan penyampaian LHP dimaksud.",
+            "Data dan informasi yang disampaikan mengacu pada hasil pemeriksaan terakhir",
+            "Semua benar",
+            "Terdapat permintaan dari lembaga lain atau kewajiban untuk menyampaikannya sesuai amanat peraturan perundang-undangan"
+        ],
+        "answer": "Semua benar",
+        "explanation": "Penyampaian LHP ke lembaga lain harus didasari permintaan resmi atau kewajiban peraturan perundang-undangan, wajib menggunakan data dan informasi dari hasil pemeriksaan terakhir, dan cakupannya harus disesuaikan dengan kebutuhan spesifik lembaga peminta. Oleh karena itu, semua pernyataan benar."
+    },
+    {
+        "id": 13,
+        "version": 1,
+        "category": "Regulasi",
+        "question": "POJK terbaru terkait konsolidasi BPR/BPRS adalah",
+        "options": [
+            "POJK Nomor 7 Tahun 2024",
+            "POJK Nomor 8 Tahun 2024",
+            "POJK Nomor 9 Tahun 2024",
+            "POJK Nomor 10 Tahun 2024"
+        ],
+        "answer": "POJK Nomor 7 Tahun 2024",
+        "explanation": "POJK Nomor 7 Tahun 2024 tentang Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah adalah regulasi terbaru yang menjadi payung hukum utama bagi BPR/BPRS, termasuk di dalamnya mengatur secara detail mengenai proses dan ketentuan konsolidasi."
+    },
     { id: 14, version: 1, category: "Konglomerasi Keuangan", question: "Penilaian risiko terintegrasi dalam Konglomerasi Keuangan dilakukan sebanyak:", options: ["1 kali dalam 1 triwulan", "2 kali dalam 1 semester", "1 kali dalam 1 tahun", "2 kali dalam 1 tahun"], answer: "2 kali dalam 1 tahun", explanation: "Penilaian risiko terintegrasi untuk Konglomerasi Keuangan dilakukan secara berkala setiap semester atau 2 kali dalam setahun." },
     { id: 15, version: 1, category: "Analisis Ekonomi", question: "Analisis yang dapat digunakan untuk mengetahui pertumbuhan pergerakan ekonomi pada suatu wilayah dan mengindikasikan produktivitas dan daya saing perekonomian suatu daerah dari lapangan usaha/sektor/subsektor, merupakan manfaat dari:", options: ["Analisis NPL", "Analisis forward & backward linkage", "Analisis shift share", "Analisis LQ/DLQ"], answer: "Analisis shift share", explanation: "Analisis Shift-Share secara spesifik membedah pertumbuhan ekonomi regional menjadi komponen pertumbuhan nasional, bauran industri, dan keunggulan kompetitif regional." },
     { id: 16, version: 1, category: "Organisasi OJK", question: "Dibawah ini fungsi Kantor OJK Daerah, kecuali:", options: ["Merencanakan, mengarahkan, menetapkan kebijakan, mengoordinasi, melaksanakan, dan mengevaluasi pengawasan...", "Melaksanakan dan mengoordinasikan analisis ekonomi dan keuangan regional", "Melaksanakan Pelindungan Konsumen", "Melakukan koordinasi pengawasan, penetapan sanksi administratif atas pelanggaran administratif..."], answer: "Merencanakan, mengarahkan, menetapkan kebijakan, mengoordinasi, melaksanakan, dan mengevaluasi pengawasan...", explanation: "Fungsi perencanaan, penetapan kebijakan, dan evaluasi pengawasan secara nasional merupakan kewenangan OJK Pusat. Kantor OJK Daerah melaksanakan fungsi pengawasan di wilayahnya." },
@@ -36,7 +101,20 @@ const questions = [
     { id: 31, version: 1, category: "Tata Kelola", question: "Di bawah ini yang bukan termasuk dalam komponen penerapan tata kelola yang baik sebagaimana diatur dalam POJK 17 2023 adalah:", options: ["Penyediaan dana kepada pihak terkait penyediaan dana besar", "Sistem rotasi telah dilaksanakan untuk menghindari ketergantungan kepada pegawai tertentu dan mengurangi kemungkinan terjadinya fraud", "Penerapan manajemen risiko termasuk sistem pengendalian intern", "Integritas pelaporan dan sistem informasi teknologi"], answer: "Sistem rotasi telah dilaksanakan untuk menghindari ketergantungan kepada pegawai tertentu dan mengurangi kemungkinan terjadinya fraud", explanation: "Sistem rotasi adalah bagian dari implementasi pengendalian intern, bukan komponen utama GCG itu sendiri. Komponen utama mencakup manajemen risiko, transparansi, dan penanganan pihak terkait." },
     { id: 32, version: 1, category: "Kelembagaan", question: "Bentuk hukum Bank Perkreditan Rakyat:", options: ["Koperasi, Perusahaan Umum Daerah, CV", "Yayasan, PT dan CV", "Yayasan, PT dan Perusahaan Umum Daerah", "Perusahaan Umum Daerah, Perusahaan Perseroan Daerah, Koperasi dan PT"], answer: "Perusahaan Umum Daerah, Perusahaan Perseroan Daerah, Koperasi dan PT", explanation: "Sesuai UU P2SK dan POJK 7/2024, bentuk badan hukum BPR/BPRS adalah Perseroan Terbatas (PT), Koperasi, Perusahaan Perseroan Daerah, atau Perusahaan Umum Daerah." },
     { id: 33, version: 1, category: "Regulasi", question: "Apa latar belakang utama perlunya penyempurnaan ketentuan terkait pemanfaatan Tenaga Kerja Asing (TKA) dalam sektor perbankan?", options: ["Arahan dari lembaga internasional seperti IMF", "Perubahan kebijakan Kementerian Ketenagakerjaan", "Perkembangan globalisasi, liberalisasi ekonomi, dan kebutuhan bank", "Permintaan dari asosiasi perbankan asing"], answer: "Perkembangan globalisasi, liberalisasi ekonomi, dan kebutuhan bank", explanation: "Kebutuhan akan keahlian spesifik seiring perkembangan industri keuangan global menjadi alasan utama perlunya penyesuaian aturan TKA agar perbankan nasional tetap kompetitif." },
-    { id: 34, version: 1, category: "Hukum Perbankan", question: "Pasal 48 UU Perbankan atau Pasal 62 UU Perbankan Syariah mengatur mengenai tindak pidana yang berkaitan dengan ...", options: ["Rahasia Bank.", "Kegiatan Usaha Bank.", "Perizinan.", "Pengawasan Bank."], answer: "Kegiatan Usaha Bank.", explanation: "Pasal-pasal tersebut mengatur sanksi pidana bagi direksi, komisaris, atau pegawai bank yang dengan sengaja tidak melaksanakan kegiatan usaha sesuai dengan prinsip kehati-hatian." },
+    {
+        "id": 34,
+        "version": 1,
+        "category": "Hukum Perbankan",
+        "question": "Pasal 48 UU Perbankan atau Pasal 62 UU Perbankan Syariah mengatur mengenai tindak pidana yang berkaitan dengan ...",
+        "options": [
+            "Rahasia Bank.",
+            "Kegiatan Usaha Bank.",
+            "Perizinan.",
+            "Pengawasan Bank."
+        ],
+        "answer": "Pengawasan Bank.",
+        "explanation": "Pasal 48 UU Perbankan dan Pasal 62 UU Perbankan Syariah secara spesifik mengatur sanksi pidana bagi anggota dewan komisaris, direksi, atau pegawai bank yang dengan sengaja tidak memberikan keterangan atau menghalang-halangi pelaksanaan pemeriksaan (pengawasan) yang dilakukan oleh OJK."
+    },
     { id: 35, version: 1, category: "Pengawasan", question: "Yang bukan merupakan prinsip SMART dalam penyusunan Supervisory Plan adalah", options: ["Strategy", "Measurable", "Timely", "Relevant"], answer: "Strategy", explanation: "Prinsip SMART dalam perencanaan adalah Specific, Measurable, Achievable, Relevant, dan Timely. 'Strategy' bukan merupakan bagian dari akronim ini." },
     { id: 36, version: 1, category: "Konglomerasi Keuangan", question: "Cakupan pengawasan konglomerasi keuangan yang disesuaikan akibat adanya Undang-undang Pengembangan dan Penguatan Sektor Keuangan (UU P2SK) sebagai berikut, kecuali:", options: ["Struktur Konglomerasi Keuangan", "Anggota Konglomerasi Keuangan", "Tata Cara Pemilihan Perusahaan Anak", "Cakupan Kewenangan dalam Melakukan Pemeriksaan"], answer: "Tata Cara Pemilihan Perusahaan Anak", explanation: "UU P2SK memperluas cakupan pengawasan terhadap struktur, anggota, dan kewenangan pemeriksaan, namun tidak mengatur secara spesifik tata cara LJK memilih perusahaan anaknya." },
     { id: 37, version: 1, category: "Perizinan", question: "Pada proses izin pembukaan Kantor Cabang, Bank BHI mengajukan permohonan izin kepada OJK paling lama berapa hari kerja sebelum rencana pelaksanaan pembukaan KC?", options: ["14 hari kerja", "30 hari kerja", "14 hari", "30 hari"], answer: "30 hari kerja", explanation: "Permohonan izin pembukaan Kantor Cabang harus diajukan paling lambat 30 hari kerja sebelum tanggal rencana pembukaan untuk memberikan waktu yang cukup bagi OJK untuk melakukan analisis." },
@@ -67,7 +145,20 @@ const questions = [
     { id: 62, version: 1, category: "Konglomerasi Keuangan", question: "Dengan telah diundangkannya Peraturan OJK Nomor 30 Tahun 2024 tentang Konglomerasi Keuangan dan Perusahaan Induk Konglomerasi Keuangan, kedepannya struktur KK yang laporan keuangannya dikonsolidasikan, adalah:", options: ["Struktur Horizontal", "Struktur Horizontal dan Mixed", "Struktur Vertikal dan Horizontal", "Struktur Vertikal"], answer: "Struktur Vertikal", explanation: "POJK baru mengarahkan pada pembentukan PIKK yang menciptakan struktur vertikal yang jelas, di mana laporan keuangan dikonsolidasikan ke entitas induk." },
     { id: 63, version: 1, category: "Perizinan", question: "Berapa lamakah persetujuan prinsip yang telah diberikan OJK dalam rangka pendirian LPIP berlaku?", options: ["Tidak terdapat masa berlaku", "Paling lama 3 (tiga) bulan sejak tanggal persetujuan prinsip diterbitkan", "Paling lama 24 (dua puluh empat) bulan sejak tanggal persetujuan prinsip diterbitkan", "Paling lama 12 (dua belas) bulan sejak tanggal persetujuan prinsip diterbitkan", "Paling lama 6 (enam) bulan sejak tanggal persetujuan prinsip diterbitkan"], answer: "Paling lama 12 (dua belas) bulan sejak tanggal persetujuan prinsip diterbitkan", explanation: "Persetujuan Prinsip untuk pendirian Lembaga Penjaminan Infrastruktur dan Proyek (LPIP) berlaku selama 12 bulan, di mana dalam periode tersebut pemohon harus memenuhi persyaratan untuk mendapatkan Izin Usaha." },
     { id: 64, version: 1, category: "Sistem Informasi", question: "Komponen Know Your BPR/BPRS (KYBPR/BPRS):", options: ["Kelembagaan dan Organisasi", "Semua benar", "Bisnis Utama dan Infrastruktur Pendukung", "Perkembangan Kinerja"], answer: "Semua benar", explanation: "Modul KYBPR/BPRS mencakup pemahaman komprehensif atas bank, termasuk aspek kelembagaan, model bisnis, infrastruktur, hingga analisis kinerja keuangannya." },
-    { id: 65, version: 1, category: "Fit and Proper Test", question: "Pihak utama sebagai berikut dapat tidak melalui tahapan klarifikasi dalam proses PKK, kecuali:", options: ["Mantan Direktur Korporasi yang akan menjabat sebagai Direktur Utama pada bank dengan BUKU yang lebih tinggi", "Mantan Direktur Kepatuhan yang akan menjabat sebagai anggota Direksi di bank lain dengan BUKU yang lebih tinggi", "Mantan Direktur Utama yang akan menjabat sebagai anggota Direksi di bank lain dengan BUKU yang lebih rendah", "Mantan Direktur Kepatuhan yang akan menjabat sebagai Direktur Utama di bank dengan BUKU yang sama"], answer: "Mantan Direktur Kepatuhan yang akan menjabat sebagai Direktur Utama di bank dengan BUKU yang sama", explanation: "Klarifikasi tetap diperlukan jika ada perubahan fungsi yang signifikan (dari kepatuhan ke utama/bisnis) meskipun di level bank yang sama, untuk memastikan kompetensinya sesuai." },
+    {
+        "id": 65,
+        "version": 1,
+        "category": "Fit and Proper Test",
+        "question": "Pihak utama sebagai berikut dapat tidak melalui tahapan klarifikasi dalam proses PKK, kecuali:",
+        "options": [
+            "Mantan Direktur Korporasi yang akan menjabat sebagai Direktur Utama pada bank dengan BUKU yang lebih tinggi",
+            "Mantan Direktur Kepatuhan yang akan menjabat sebagai anggota Direksi di bank lain dengan BUKU yang lebih tinggi",
+            "Mantan Direktur Utama yang akan menjabat sebagai anggota Direksi di bank lain dengan BUKU yang lebih rendah",
+            "Mantan Direktur Kepatuhan yang akan menjabat sebagai Direktur Utama di bank dengan BUKU yang sama"
+        ],
+        "answer": "Mantan Direktur Korporasi yang akan menjabat sebagai Direktur Utama pada bank dengan BUKU yang lebih tinggi",
+        "explanation": "Proses klarifikasi dalam PKK wajib dilakukan ketika terdapat peningkatan eksposur risiko dan tanggung jawab yang signifikan. Kenaikan jabatan dari Direktur Korporasi menjadi Direktur Utama, ditambah dengan perpindahan ke bank dengan skala usaha yang lebih besar (BUKU lebih tinggi), merupakan perubahan material yang memerlukan pendalaman melalui tahapan klarifikasi."
+    },
     { id: 66, version: 1, category: "Perbankan Syariah", question: "Produk bank syariah yang tidak tersedia di bank konvensional adalah:", options: ["Kartu kredit", "Gadai (Rahn)", "Tabungan dan Deposito", "Letter of Credit (LC)"], answer: "Gadai (Rahn)", explanation: "Gadai Syariah (Rahn) adalah produk spesifik bank syariah yang menggunakan akad gadai sesuai prinsip syariah, berbeda dengan produk gadai konvensional." },
     { id: 67, version: 1, category: "Regulasi", question: "Pengaturan terkait kualitas aset, KPMM, dan TKS, termasuk dalam lingkup regulasi:", options: ["Material", "Komersial", "Kelembagaan", "Prudensial"], answer: "Prudensial", explanation: "Regulasi yang berkaitan dengan kesehatan dan kehati-hatian bank, seperti kualitas aset, permodalan (KPMM), dan Tingkat Kesehatan (TKS), termasuk dalam lingkup pengaturan prudensial." },
     { id: 68, version: 1, category: "Pelaporan", question: "Pengumuman laporan publikasi keuangan dan informasi kinerja keuangan tahunan bagi bank paling lambat dilaksanakan pada:", options: ["4 bulan setelah akhir tahun buku", "3 bulan setelah akhir tahun buku", "1 bulan setelah akhir tahun buku", "1 bulan setelah diterbitkannya laporan auditor independen"], answer: "4 bulan setelah akhir tahun buku", explanation: "Bank wajib mempublikasikan laporan keuangan tahunan yang telah diaudit paling lambat pada akhir bulan keempat setelah tanggal laporan posisi keuangan akhir tahun buku (akhir April)." },
@@ -101,7 +192,20 @@ const questions = [
     { id: 96, version: 1, category: "Regulasi", question: "Landasan ketentuan internal di OJK, berupa:", options: ["Peraturan Dewan Komisioner (PDK) dan Surat Edaran Otoritas Jasa Keuangan (SEOJK)", "Peraturan Dewan Komisioner (PDK) dan Surat Edaran Dewan Komisioner (SEDK)", "Peraturan Otoritas Jasa Keuangan (POJK) dan Surat Edaran Dewan Komisioner (SEDK)", "Peraturan Otoritas Jasa Keuangan (POJK) dan Surat Edaran Otoritas Jasa Keuangan (SEOJK)"], answer: "Peraturan Dewan Komisioner (PDK) dan Surat Edaran Dewan Komisioner (SEDK)", explanation: "Ketentuan untuk internal OJK diatur dalam PDK dan SEDK, sedangkan POJK dan SEOJK adalah peraturan yang ditujukan untuk industri jasa keuangan (eksternal)." },
     { id: 97, version: 1, category: "Perbankan Syariah", question: "Di bawah ini merupakan prinsip perbankan syariah berdasarkan Undang-Undang Nomor 21 Tahun 2008, kecuali:", options: ["Prinsip Syariah", "Demokrasi ekonomi", "Prinsip sosial", "Prinsip kehati-hatian"], answer: "Prinsip sosial", explanation: "UU Perbankan Syariah menetapkan bahwa operasional bank syariah harus berlandaskan Prinsip Syariah, Demokrasi Ekonomi, dan Prinsip Kehati-hatian. Prinsip sosial adalah bagian dari implementasi, bukan prinsip dasar utama." },
     { id: 98, version: 1, category: "Pengawasan", question: "Penyusunan Laporan Large Exposure (LEX) merupakan fungsi pada spesialis", options: ["Pasar dan Likuiditas", "Kredit", "Teknologi Informasi", "APU-PPT"], answer: "Kredit", explanation: "Large Exposure (Eksposur Besar) berkaitan erat dengan konsentrasi kredit, sehingga analisis dan pelaporannya menjadi tanggung jawab spesialis di bidang risiko kredit." },
-    { id: 99, version: 1, category: "Manajemen Krisis", question: "Mekanisme Koordinasi dalam rangka pemantauan manajemen krisis memerlukan informasi baik dari sumber informasi internal maupun eksternal, kecuali:", options: ["Internal yaitu berupa hasil analisis koordinasi Pemantauan Sektor Perbankan", "Eksternal yaitu berdasarkan Sumber Informasi Eksternal Sektor Perbankan", "Internal yaitu berupa hasil pengawasan Satker Pengawas Sektor Perbankan", "Eksternal yaitu berdasarkan fenomena-fenomena yang terjadi di sektor perekonomian"], answer: "Eksternal yaitu berdasarkan Sumber Informasi Eksternal Sektor Perbankan", explanation: "Sumber informasi eksternal yang relevan adalah fenomena ekonomi riil, bukan laporan dari sumber eksternal lainnya. Data internal dari pengawasan dan pemantauan adalah input utama." },
+     {
+        "id": 99,
+        "version": 1,
+        "category": "Manajemen Krisis",
+        "question": "Mekanisme Koordinasi dalam rangka pemantauan manajemen krisis memerlukan informasi baik dari sumber informasi internal maupun eksternal, kecuali:",
+        "options": [
+            "Internal yaitu berupa hasil analisis koordinasi Pemantauan Sektor Perbankan",
+            "Eksternal yaitu berdasarkan Sumber Informasi Eksternal Sektor Perbankan",
+            "Internal yaitu berupa hasil pengawasan Satker Pengawas Sektor Perbankan",
+            "Eksternal yaitu berdasarkan fenomena-fenomena yang terjadi di sektor perekonomian"
+        ],
+        "answer": "Eksternal yaitu berdasarkan fenomena-fenomena yang terjadi di sektor perekonomian",
+        "explanation": "Mekanisme koordinasi manajemen krisis memerlukan input informasi yang spesifik dan terukur, baik internal (hasil pengawasan dan analisis) maupun eksternal. 'Fenomena-fenomena di sektor perekonomian' dianggap sebagai konteks makro atau pemicu (trigger), tetapi bukan merupakan sumber data/informasi terolah yang secara langsung menjadi bahan dalam mekanisme koordinasi, berbeda dengan laporan atau hasil analisis yang spesifik."
+    },
     { id: 100, version: 1, category: "Pengawasan", question: "BPR XYZ telah diberikan perpanjangan jangka waktu pengawasan intensif dan akan berakhir pada tanggal 2 November 2021. Apabila sampai dengan batas waktu perpanjangan tersebut berakhir tidak terdapat peningkatan kondisi keuangan dan rasio KPMM berada pada posisi 9%, maka:", options: ["Jawaban tidak ada yang sesuai.", "OJK menetapkan perpanjangan jangka waktu pengawasan intensif.", "OJK meminta BPR untuk menyusun rencana tindak (action plan).", "OJK menetapkan BPR dalam pengawasan khusus."], answer: "OJK menetapkan BPR dalam pengawasan khusus.", explanation: "Jika setelah masa pengawasan intensif berakhir kondisi tidak membaik dan KPMM masih di bawah ambang batas (misalnya 12%), maka status pengawasan akan dinaikkan menjadi Pengawasan Khusus (atau Bank Dalam Penyehatan)." },
     
     // SOAL VERSI 2
@@ -206,3 +310,4 @@ const questions = [
     { id: 199, version: 2, category: "Pemeriksaan", question: "Manakah perbuatan berikut yang merupakan PKP di bidang perkreditan/ pembiayaan", options: ["Penarikan uang kas tanpa underlying dan dicatat pada pos yang tidak semestinya.", "Rekayasa kolektibilitas kredit/pembiayaan", "Pelanggaran terkait rahasia bank.", "Pelanggaran Cease and Desist Order (CDO) berupa pemberian kredit pada masa Bank dinyatakan Dalam Pengawasan Khusus."], answer: "Rekayasa kolektibilitas kredit/pembiayaan", explanation: "Rekayasa kolektibilitas adalah Penyimpangan Ketentuan Perbankan (PKP) yang secara langsung terkait dengan bidang perkreditan, di mana kualitas kredit ditampilkan lebih baik dari kondisi sebenarnya." },
     { id: 200, version: 2, category: "Perbankan Syariah", question: "Kerangka tata kelola syariah bagi BUS dan UUS terdiri dari:", options: ["DPS, komite syariah, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah", "DPS, kepatuhan dan manajemen risiko syariah, audit intern syariah, audit ekstern syariah", "DPS, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah", "DPS, kepatuhan syariah, komite syariah, audit intern syariah, audit ekstern syariah"], answer: "DPS, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah", explanation: "Kerangka tata kelola syariah yang komprehensif mencakup semua elemen tersebut, mulai dari pengawasan oleh DPS hingga fungsi pengendalian dan review oleh pihak internal dan eksternal." }
 ];
+
