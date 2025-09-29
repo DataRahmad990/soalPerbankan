@@ -145,11 +145,9 @@
         </div>
     </div>
 
-    <!-- PENTING: Memuat file database soal SEBELUM logika kuis -->
     <script src="database.js"></script>
 
     <script>
-        // Logika kuis sekarang ada di sini, terpisah dari data soal.
         document.addEventListener('DOMContentLoaded', function () {
             
             // Variabel Global
@@ -222,27 +220,35 @@
                 questionNavigation.innerHTML = '';
                 const selectedCategory = categoryFilter.value;
                 const filteredQuestions = questions.filter(q => selectedCategory === 'all' || q.category === selectedCategory);
-                const totalQuestionsInQuiz = 200;
+                
+                // ================= PERUBAHAN 1: Membuat Total Soal Dinamis =================
+                const totalQuestionsInQuiz = Math.max(...questions.map(q => q.id));
 
                 for (let groupStart = 1; groupStart <= totalQuestionsInQuiz; groupStart += 25) {
                     const groupEnd = Math.min(groupStart + 24, totalQuestionsInQuiz);
                     
-                    if (groupStart === 101) {
+                    // ================= PERUBAHAN 2: Membuat Label Versi Dinamis =================
+                    let versionText = '';
+                    if (groupStart === 101) versionText = 'SOAL VERSI 2';
+                    else if (groupStart === 201) versionText = 'SOAL VERSI 3'; // Contoh jika nanti ada versi 3
+                    else if (groupStart === 301) versionText = 'SOAL VERSI 4';
+
+                    if (versionText) {
                         const separator = document.createElement('div');
                         separator.className = 'w-full my-4 py-2 text-center bg-slate-200 text-slate-800 font-bold rounded-lg text-sm';
-                        separator.textContent = 'SOAL VERSI 2';
+                        separator.textContent = versionText;
                         questionNavigation.appendChild(separator);
                     }
                     
                     const questionsInGroupForFilter = filteredQuestions.filter(q => q.id >= groupStart && q.id <= groupEnd);
 
-                    if (selectedCategory !== 'all' && questionsInGroupForFilter.length === 0) continue;
+                    if (selectedCategory !== 'all' && questionsInGroupForFilter.length === 0 && (groupStart < 301 || groupStart > 400) ) continue;
 
                     const groupContainer = document.createElement('div');
                     const header = document.createElement('h4');
                     header.textContent = `Soal ${groupStart} - ${groupEnd}`;
                     header.className = 'text-sm font-semibold text-gray-600 mt-4 pb-1 border-b';
-                    if (groupStart === 1 || groupStart === 101) header.classList.remove('mt-4');
+                    if (groupStart === 1 || groupStart === 101 || groupStart === 301) header.classList.remove('mt-4'); // Hapus margin atas untuk header pertama/versi baru
                     groupContainer.appendChild(header);
 
                     const gridContainer = document.createElement('div');
@@ -469,5 +475,3 @@
 
 </body>
 </html>
-
-
