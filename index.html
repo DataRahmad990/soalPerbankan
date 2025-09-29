@@ -222,7 +222,7 @@
                 questionNavigation.innerHTML = '';
                 const selectedCategory = categoryFilter.value;
                 const filteredQuestions = questions.filter(q => selectedCategory === 'all' || q.category === selectedCategory);
-                const totalQuestionsInQuiz = 200;
+                const totalQuestionsInQuiz = 1200;
 
                 for (let groupStart = 1; groupStart <= totalQuestionsInQuiz; groupStart += 25) {
                     const groupEnd = Math.min(groupStart + 24, totalQuestionsInQuiz);
@@ -469,3 +469,4 @@
 
 </body>
 </html>
+
