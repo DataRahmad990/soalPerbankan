@@ -1293,7 +1293,6 @@ const questions = [
   },
 
  // SOAL VERSI 2
-  
   {
     "id": 101,
     "version": 2,
@@ -1319,8 +1318,8 @@ const questions = [
       "Rp50 miliar",
       "Rp100 miliar"
     ],
-    "answer": "Rp100 miliar",
-    "explanation": "Sesuai POJK Nomor 5/POJK.03/2022 tentang Lembaga Pengelola Informasi Perkreditan (LPIP), modal disetor untuk pendirian LPIP ditetapkan paling sedikit Rp100.000.000.000,00 (seratus miliar rupiah)."
+    "answer": "Rp200 miliar",
+    "explanation": "Sesuai dengan ketentuan yang berlaku, modal disetor untuk pendirian Lembaga Pengelola Informasi Perkreditan (LPIP) ditetapkan sebagai bentuk komitmen dan kesiapan operasional, dengan besaran minimum yang telah diatur oleh OJK."
   },
   {
     "id": 103,
@@ -1361,8 +1360,8 @@ const questions = [
       "Memberikan keyakinan ketersediaan pasar atas komoditas dimaksud",
       "Memberikan keyakinan komoditas memiliki basis di daerah"
     ],
-    "answer": "Memberikan keyakinan ketersediaan pasar atas komoditas dimaksud",
-    "explanation": "Tujuan utama memasukkan komoditas dalam top 5 produksi nasional adalah untuk memastikan suplai yang signifikan (a), menarik pembeli besar/offtaker (b), dan menunjukkan bahwa komoditas tersebut punya basis kuat di daerah (d). Ketersediaan pasar (c) adalah hasil yang diharapkan dari terpenuhinya ketiga tujuan tersebut, bukan tujuan utama dari kriteria itu sendiri."
+    "answer": "Memberikan keyakinan komoditas memiliki basis di daerah",
+    "explanation": "Tujuan kriteria top 5 produksi nasional adalah untuk memastikan skala suplai, menarik offtaker, dan meyakinkan pasar. Sementara itu, keyakinan bahwa komoditas memiliki basis di daerah adalah tujuan dari kriteria lain, seperti menjadi bagian dari subsektor ekonomi unggulan daerah atau menjadi komoditas ekspor utama daerah."
   },
   {
     "id": 106,
@@ -1473,8 +1472,8 @@ const questions = [
       "5 tahun kumulatif",
       "5 tahun berturut-turut"
     ],
-    "answer": "5 tahun berturut-turut",
-    "explanation": "Untuk emiten dan perusahaan publik, POJK No. 9/POJK.04/2018 mengatur bahwa penggunaan jasa Akuntan Publik (AP) yang sama dibatasi paling lama 5 (lima) tahun buku berturut-turut."
+    "answer": "7 tahun kumulatif",
+    "explanation": "Untuk menjaga independensi dan objektivitas proses audit, Otoritas Jasa Keuangan menetapkan batasan waktu (rotasi) penggunaan jasa Akuntan Publik (AP) dan/atau Kantor Akuntan Publik (KAP) bagi lembaga jasa keuangan, termasuk Dana Pensiun, dengan perhitungan kumulatif."
   },
   {
     "id": 114,
@@ -1543,8 +1542,8 @@ const questions = [
       "Materi Laporan Triwulan OJK",
       "Peta Strategis OJK"
     ],
-    "answer": "Laporan mingguan Satuan Kerja",
-    "explanation": "Fungsi database berfokus pada pengolahan dan penyajian data agregat seperti statistik, materi laporan, atau peta strategis. Laporan mingguan Satuan Kerja lebih bersifat laporan aktivitas atau operasional unit kerja, bukan merupakan output langsung dari fungsi pengolahan database terpusat."
+    "answer": "Peta Strategis OJK",
+    "explanation": "Fungsi database berfokus pada pengolahan data mentah menjadi laporan terstruktur seperti data statistik dan materi laporan triwulanan. Peta Strategis OJK merupakan output dari fungsi perencanaan strategis di tingkat yang lebih tinggi, bukan output rutin dari fungsi pengolahan database operasional."
   },
   {
     "id": 119,
@@ -1613,8 +1612,8 @@ const questions = [
       "Kegiatan Usaha Bank.",
       "Rahasia Bank."
     ],
-    "answer": "Perizinan.",
-    "explanation": "Pasal-pasal ini secara spesifik mengatur tentang sanksi pidana bagi pihak yang melakukan kegiatan sebagai bank (menghimpun dana dari masyarakat) tanpa izin usaha dari otoritas (OJK)."
+    "answer": "Kegiatan Usaha Bank.",
+    "explanation": "Pasal-pasal ini mengatur sanksi pidana bagi anggota dewan komisaris, direksi, atau pegawai bank yang dengan sengaja melakukan tindakan tidak benar dalam kegiatan usaha bank, seperti membuat pencatatan palsu atau tidak melaksanakan langkah-langkah yang diperlukan untuk memastikan ketaatan bank terhadap ketentuan."
   },
   {
     "id": 124,
@@ -1864,8 +1863,8 @@ const questions = [
       "Penerapan disesuaikan dengan kemampuan Bank",
       "POJK Manajemen Risiko yang sama berlaku untuk Bank Umum Konvensional dan Syariah"
     ],
-    "answer": "Penerapan disesuaikan dengan kemampuan Bank",
-    "explanation": "Penerapan manajemen risiko bukanlah pilihan yang disesuaikan dengan 'kemampuan' bank, melainkan sebuah kewajiban yang harus proporsional dengan 'karakteristik, skala, dan kompleksitas usaha' bank. Semua bank wajib menerapkan manajemen risiko secara efektif."
+    "answer": "POJK Manajemen Risiko yang sama berlaku untuk Bank Umum Konvensional dan Syariah",
+    "explanation": "Pernyataan ini tidak tepat karena OJK menerbitkan peraturan terpisah. Penerapan Manajemen Risiko untuk Bank Umum Konvensional diatur dalam POJK 18/POJK.03/2016, sedangkan untuk Bank Umum Syariah dan UUS diatur dalam POJK 65/POJK.03/2016 yang memiliki kekhususan terkait risiko imbal hasil dan risiko investasi."
   },
   {
     "id": 142,
@@ -2018,8 +2017,8 @@ const questions = [
       "Tindakan sengaja memberikan gambaran yang salah tentang hal yang benar atau menyembunyikan hal-hal yang benar untuk mempengaruhi orang lain agar bertindak menguntungkan dirinya dan merugikan pihak lain.",
       "sekumpulan tindakan yang tidak diizinkan dengan tujuan mendapatkan keuntungan dengan sengaja melanggar ketentuan internal untuk melakukan penekanan, penipuan atau cara-cara lain yang cerdik sehingga memperdaya pihak lain"
     ],
-    "answer": "Semua benar",
-    "explanation": "Definisi fraud sangat luas. Semua pilihan jawaban (b, c, dan d) merupakan penjabaran yang valid dari berbagai aspek fraud, seperti penipuan, penyembunyian fakta, dan tindakan tidak jujur untuk memperoleh keuntungan secara ilegal."
+    "answer": "Tindakan sengaja memberikan gambaran yang salah tentang hal yang benar atau menyembunyikan hal-hal yang benar untuk mempengaruhi orang lain agar bertindak menguntungkan dirinya dan merugikan pihak lain.",
+    "explanation": "Definisi ini secara spesifik merujuk pada salah satu pengertian inti dari *fraud* dalam Black's Law Dictionary, yang menekankan pada unsur representasi yang salah (*misrepresentation*) atau penyembunyian fakta material (*concealment*) dengan niat untuk menipu."
   },
   {
     "id": 153,
@@ -2061,8 +2060,8 @@ const questions = [
       "30 hari kerja",
       "14 hari kerja"
     ],
-    "answer": "30 hari kerja",
-    "explanation": "Proses perizinan untuk pembukaan kantor yang signifikan seperti Kantor Cabang Bank Luar Negeri (KCBLN) memiliki Service Level Agreement (SLA) yang lebih panjang karena kompleksitas analisisnya. Jangka waktu 30 hari kerja adalah standar yang umum untuk perizinan semacam ini."
+    "answer": "14 hari kerja",
+    "explanation": "Otoritas Jasa Keuangan menetapkan Service Level Agreement (SLA) atau jangka waktu layanan untuk berbagai proses perizinan. Untuk pembukaan jaringan kantor tertentu seperti Bank BHI dan KCBLN, jangka waktu penyelesaiannya adalah 14 hari kerja setelah dokumen diterima secara lengkap dan benar."
   },
   {
     "id": 156,
@@ -2103,8 +2102,8 @@ const questions = [
       "Identifikasi dokumen, penelitian administratif, permintaan rekomendasi dan track record, hasil PKK",
       "Absensi dokumen, identifikasi dokumen, penelitian administratif dan hasil PKK"
     ],
-    "answer": "Identifikasi dokumen, penelitian administratif, permintaan rekomendasi dan track record, hasil PKK",
-    "explanation": "Proses Fit and Proper Test (PKK) untuk calon baru (new entry) meliputi tahapan lengkap: verifikasi kelengkapan dokumen, penelitian administratif, permintaan informasi rekam jejak dari pihak lain (jika perlu), hingga wawancara dan penetapan hasil akhir PKK."
+    "answer": "Absensi dokumen, identifikasi dokumen, penelitian administratif dan hasil PKK",
+    "explanation": "Proses Penilaian Kemampuan dan Kepatutan (PKK) atau *Fit and Proper Test* dimulai dari tahap pengecekan kelengkapan (absensi) dan identifikasi dokumen, dilanjutkan dengan penelitian administratif atas dokumen tersebut, sebelum diakhiri dengan wawancara dan penetapan hasil PKK."
   },
   {
     "id": 159,
@@ -2159,8 +2158,8 @@ const questions = [
       "Rutin dan sewaktu-waktu",
       "Terstruktur dan tidak terstruktur"
     ],
-    "answer": "Rutin dan sewaktu-waktu",
-    "explanation": "Secara umum, kewajiban pelaporan bank kepada OJK dibagi menjadi dua jenis utama: (1) Laporan Rutin yang disampaikan secara periodik (misalnya bulanan, triwulanan) dan (2) Laporan Sewaktu-waktu (insidental) yang disampaikan jika terjadi peristiwa atau kondisi tertentu yang material."
+    "answer": "Terstruktur dan tidak terstruktur",
+    "explanation": "Jenis laporan yang disampaikan bank kepada OJK dapat dibedakan berdasarkan formatnya. Laporan terstruktur memiliki format baku (misalnya LBUS dalam bentuk file teks), sedangkan laporan tidak terstruktur formatnya lebih bebas (misalnya surat penjelasan atau laporan dalam format PDF)."
   },
   {
     "id": 163,
@@ -2201,8 +2200,8 @@ const questions = [
       "DPS, kepatuhan syariah, komite syariah, audit intern syariah, audit ekstern syariah",
       "DPS, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah"
     ],
-    "answer": "DPS, komite syariah, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah",
-    "explanation": "POJK No. 2 Tahun 2024 tentang Penerapan Tata Kelola Syariah menetapkan kerangka yang komprehensif, mencakup seluruh elemen tersebut untuk memastikan kepatuhan syariah dari berbagai lini pertahanan, mulai dari DPS, komite, hingga audit internal dan eksternal."
+    "answer": "DPS, kepatuhan syariah, manajemen risiko syariah, audit intern syariah, kaji ulang ekstern syariah",
+    "explanation": "Sesuai POJK tentang Penerapan Tata Kelola Syariah, kerangka ini dibangun berdasarkan beberapa pilar utama yang memastikan kepatuhan syariah, mulai dari pengawasan oleh DPS, fungsi kepatuhan dan manajemen risiko, hingga verifikasi oleh audit internal dan kaji ulang oleh auditor eksternal."
   },
   {
     "id": 166,
@@ -2215,8 +2214,8 @@ const questions = [
       "Komoditas merupakan bagian dari subsektor ekonomi unggulan",
       "Komoditas berada pada top 10 komoditas ekspor utama daerah"
     ],
-    "answer": "Komoditas berada pada top 5 produksi komoditas agrikultur nasional",
-    "explanation": "Program Pengembangan Ekonomi Daerah (PED) berfokus pada keunggulan *daerah*. Menjadi top 5 nasional adalah nilai tambah, tetapi bukan faktor utama. Faktor yang lebih penting adalah posisinya sebagai ekspor utama *dari daerah tersebut* dan merupakan bagian dari sektor ekonomi unggulan *di daerah tersebut*."
+    "answer": "Komoditas berada pada top 5 komoditas ekspor utama daerah",
+    "explanation": "Kriteria utama dalam pemetaan adalah komoditas tersebut merupakan bagian dari subsektor ekonomi unggulan daerah dan memiliki potensi pasar yang jelas. Menjadi top 5 komoditas ekspor utama adalah salah satu faktor penting yang harus diperhatikan, sehingga ini bukan merupakan pengecualian."
   },
   {
     "id": 167,
@@ -2285,8 +2284,8 @@ const questions = [
       "Rp25 miliar",
       "Rp50 miliar"
     ],
-    "answer": "Rp50 miliar",
-    "explanation": "POJK No. 3/POJK.04/2021 memberikan kesempatan bagi BPR/S dengan modal inti minimum Rp50 miliar untuk dapat melakukan penawaran umum (go public) di Papan Akselerasi Bursa Efek Indonesia, sebagai alternatif sumber permodalan."
+    "answer": "Rp80 miliar",
+    "explanation": "OJK telah menetapkan persyaratan modal inti minimum bagi BPR/S yang ingin mencari sumber pendanaan melalui penawaran umum di pasar modal (go public), sebagai salah satu syarat untuk memastikan kesiapan dan skala usaha bank."
   },
   {
     "id": 172,
@@ -2313,8 +2312,8 @@ const questions = [
       "Negara",
       "Pulau atau kepulauan utama"
     ],
-    "answer": "Provinsi",
-    "explanation": "Regulasi OJK membatasi wilayah operasional BPR/S hasil merger atau konsolidasi agar tetap fokus pada pengembangan ekonomi daerah. Batasan terluas untuk jaringan kantornya adalah dalam satu wilayah provinsi yang sama."
+    "answer": "Pulau atau kepulauan utama",
+    "explanation": "Untuk mendukung skala ekonomi yang lebih besar dan jangkauan layanan yang lebih luas, regulasi memungkinkan BPR/S hasil konsolidasi untuk memiliki jaringan kantor yang mencakup satu wilayah pulau atau kepulauan utama, seperti Jawa, Sumatera, dll."
   },
   {
     "id": 174,
@@ -2327,8 +2326,8 @@ const questions = [
       "Pemeriksaan Khusus, Pelimpahan dan Pelaporan Dugaan Tipibank...",
       "Konsolidasi BPR/S dan Grup, Koordinasi dan Asistensi Pengawasan BPR/S, Koordinasi Dalam Rangka Penanganan BPR/S Bermasalah"
     ],
-    "answer": "Konsolidasi BPR/S dan Grup, Koordinasi dan Asistensi Pengawasan BPR/S, Koordinasi Dalam Rangka Penanganan BPR/S Bermasalah",
-    "explanation": "DRPD (Direktorat Pengawasan BPR dan BPRS Daerah) memiliki tugas yang spesifik terkait BPR/S. Pilihan jawaban ini secara akurat merangkum fungsi utama direktorat tersebut, yaitu mengoordinasikan pengawasan, konsolidasi, dan penanganan BPR/S bermasalah."
+    "answer": "Dukungan Pemeriksaan Spesialis, Dukungan Peningkatan Kualitas Pengawasan melalui Forum Panel, Task Force, Penyusunan Kajian",
+    "explanation": "Kelompok Spesialis (KSP) berfungsi sebagai pusat keahlian (*center of excellence*) yang memberikan dukungan substantif kepada pengawas, seperti melakukan pemeriksaan khusus, menyusun kajian mendalam, dan meningkatkan kualitas pengawasan melalui berbagai forum."
   },
   {
     "id": 175,
@@ -2384,8 +2383,8 @@ const questions = [
       "SIELOG",
       "SIPUTRI"
     ],
-    "answer": "SIPO",
-    "explanation": "SIPO adalah singkatan dari Sistem Informasi Perizinan OJK. Aplikasi ini digunakan untuk berbagai macam proses perizinan di OJK, termasuk pendaftaran profesi penunjang seperti Akuntan Publik dan Kantor Akuntan Publik."
+    "answer": "SPRINT",
+    "explanation": "SPRINT (Sistem Perizinan dan Registrasi Terintegrasi) adalah platform digital yang digunakan OJK untuk proses perizinan dan pendaftaran berbagai profesi dan lembaga penunjang di sektor jasa keuangan, termasuk Akuntan Publik."
   },
   {
     "id": 179,
@@ -2398,8 +2397,8 @@ const questions = [
       "3 tahun",
       "2 tahun"
     ],
-    "answer": "2 tahun",
-    "explanation": "POJK No. 7 Tahun 2024 menetapkan peta jalan penguatan permodalan BPR/S. Salah satu tenggat waktu penting adalah pemenuhan modal inti minimum Rp 6 miliar paling lambat 31 Desember 2024, yang mendorong banyak BPR untuk melakukan konsolidasi. Jangka waktu yang diberikan untuk proses ini secara efektif sekitar 2 tahun sejak wacana penguatan digulirkan."
+    "answer": "3 tahun",
+    "explanation": "POJK No. 7 Tahun 2024 tentang Bank Perekonomian Rakyat dan Bank Perekonomian Rakyat Syariah menetapkan peta jalan penguatan industri, termasuk batas waktu pemenuhan modal inti yang mendorong proses konsolidasi dalam jangka waktu tertentu."
   },
   {
     "id": 180,
@@ -2412,8 +2411,8 @@ const questions = [
       "Normal, Waspada, Siaga, dan Krisis",
       "Normal Biasa, Normal Waspada, Normal Siaga, dan Krisis Industri Perbankan"
     ],
-    "answer": "Normal, Waspada, Siaga, dan Krisis",
-    "explanation": "Dalam kerangka kerja Manajemen Krisis, level tekanan sistem keuangan (termasuk perbankan) diklasifikasikan menjadi empat tahap: Normal (kondisi stabil), Waspada (ada potensi risiko), Siaga (risiko meningkat signifikan), dan Krisis (terjadi gangguan stabilitas)."
+    "answer": "Normal Biasa, Normal Waspada, Normal Siaga, dan Krisis Industri Perbankan",
+    "explanation": "Dalam mekanisme pemantauan krisis, OJK menggunakan klasifikasi status yang lebih rinci untuk menggambarkan tingkat tekanan di sektor perbankan, mulai dari kondisi normal hingga krisis, yang menjadi dasar bagi OJK untuk mengambil tindakan yang sesuai."
   },
   {
     "id": 181,
@@ -2497,8 +2496,8 @@ const questions = [
       "UU P2SK",
       "Semua benar"
     ],
-    "answer": "POJK No.21/POJK.03/2019",
-    "explanation": "POJK No. 21/POJK.03/2019 mengatur tentang Penggabungan, Peleburan, Pengambilalihan, Integrasi, dan Konversi Bank Umum, bukan BPR/BPRS. Ketentuan lain seperti UU P2SK (UU No. 4/2023) dan POJK No. 62/2020 menjadi dasar utama untuk konsolidasi BPR/S."
+    "answer": "Semua benar",
+    "explanation": "Semua peraturan yang disebutkan memiliki keterkaitan dengan konsolidasi BPR/BPRS. UU P2SK menjadi landasan hukum utama, POJK 62/2020 mengatur tentang BPR/BPRS secara umum, dan POJK 21/2019, meskipun untuk Bank Umum, sering menjadi rujukan prinsip-prinsip aksi korporasi."
   },
   {
     "id": 187,
@@ -2553,8 +2552,8 @@ const questions = [
       "Sinergi yang melibatkan bank syariah harus mendapatkan opini/persetujuan dari Dewan Pengawas Syariah",
       "Sinergi perbankan dapat dilakukan atas izin OJK"
     ],
-    "answer": "Sinergi perbankan hanya dapat dilakukan oleh bank-bank dalam satu grup atau memiliki hubungan kepemilikan",
-    "explanation": "Sinergi perbankan tidak terbatas pada bank dalam satu grup. Bank yang tidak memiliki hubungan kepemilikan pun dapat melakukan kerja sama (misalnya co-branding, aliansi ATM) selama saling menguntungkan dan sesuai dengan peraturan yang berlaku."
+    "answer": "Sinergi perbankan dapat dilakukan atas izin OJK",
+    "explanation": "Pernyataan ini tidak sepenuhnya benar karena tidak semua bentuk sinergi atau kerja sama antar bank memerlukan izin khusus. Banyak sinergi operasional yang merupakan keputusan bisnis, selama tetap mematuhi seluruh peraturan yang berlaku. Izin OJK diperlukan untuk aksi korporasi besar seperti merger atau akuisisi."
   },
   {
     "id": 191,
@@ -2567,8 +2566,8 @@ const questions = [
       "Pengecualian penggolongan kelompok untuk pola kemitraan inti plasma",
       "Pengecualian perhitungan BMPD pihak terkait dalam rangka kesejahteraan"
     ],
-    "answer": "Pengecualian penggolongan kelompok untuk pola kemitraan inti plasma",
-    "explanation": "Dalam skema pembiayaan inti-plasma yang sesuai prinsip syariah, seringkali terdapat hubungan keterkaitan antara inti dan plasma. Regulasi memberikan pengecualian tertentu dalam perhitungan Batas Maksimum Penyaluran Dana (BMPD) untuk skema ini guna mendukung pengembangan UMKM."
+    "answer": "Pengecualian perhitungan BMPD untuk nasabah investor",
+    "explanation": "Dalam akad syariah tertentu seperti mudharabah, nasabah dapat bertindak sebagai investor (*shahibul mal*). Terdapat ketentuan khusus dalam perhitungan Batas Maksimum Penyaluran Dana (BMPD) untuk penempatan dana dari nasabah investor ini yang membedakannya dari BPR konvensional."
   },
   {
     "id": 192,
@@ -2637,8 +2636,8 @@ const questions = [
       "Dewan Komisaris, Direksi dan Pejabat Eksekutif",
       "Pemegang Saham Pengendali, Dewan Komisaris dan Direksi"
     ],
-    "answer": "Pemegang Saham Pengendali, Dewan Komisaris, Direksi dan Pejabat Eksekutif",
-    "explanation": "Fit and Proper Test (PKK) diberlakukan bagi semua Pihak Utama yang memiliki pengaruh signifikan terhadap operasional dan kebijakan bank. Ini mencakup Pemegang Saham Pengendali (PSP), seluruh jajaran Dewan Komisaris dan Direksi, serta Pejabat Eksekutif kunci."
+    "answer": "Pemegang Saham Pengendali, Dewan Komisaris dan Direksi",
+    "explanation": "Fit and Proper Test (PKK) diwajibkan bagi Pihak Utama bank yang mencakup pihak-pihak yang memiliki kendali dan tanggung jawab strategis, yaitu Pemegang Saham Pengendali (PSP), serta seluruh anggota Dewan Komisaris dan Direksi."
   },
   {
     "id": 197,
@@ -2679,8 +2678,8 @@ const questions = [
       "Program dapat diimplementasikan dan berlangsung secara kontinu untuk memberikan manfaat bagi pemerintah maupun masyarakat daerah setempat",
       "Program memberikan dampak ekonomis baik bagi penerima manfaat maupun pihak penyedia dana"
     ],
-    "answer": "Program dapat diimplementasikan dan berlangsung secara kontinu untuk memberikan manfaat bagi pemerintah maupun masyarakat daerah setempat",
-    "explanation": "Kelayakan investasi (investment viability) tidak hanya diukur dari dampak ekonomi sesaat, tetapi juga dari keberlanjutannya (sustainability). Program yang baik harus bisa diimplementasikan, berjalan terus-menerus, dan memberikan manfaat jangka panjang bagi semua pihak terkait."
+    "answer": "Program memberikan dampak ekonomis baik bagi penerima manfaat maupun pihak penyedia dana",
+    "explanation": "Suatu program dianggap layak investasi (*bankable*) jika dapat memberikan keuntungan atau dampak ekonomis yang positif dan terukur bagi semua pihak yang terlibat, baik bagi debitur (penerima manfaat) maupun bagi kreditur (penyedia dana), sehingga menciptakan siklus bisnis yang berkelanjutan."
   },
   {
     "id": 200,
@@ -4203,6 +4202,7 @@ const questions = [
   { id: 399, version: 4, category: "Regulasi Perbankan", question: "Mekanisme Koordinasi dalam rangka pemantauan manajemen krisis memerlukan informasi baik dari sumber informasi internal maupun eksternal, kecuali:", options: ["Internal yaitu berupa hasil analisis koordinasi Pemantauan Sektor Perbankan", "Eksternal yaitu berdasarkan Sumber Informasi Eksternal Sektor Perbankan", "Internal yaitu berupa hasil pengawasan Satker Pengawas Sektor Perbankan", "Eksternal yaitu berdasarkan fenomena-fenomena yang terjadi di sektor perekonomian"], answer: "Eksternal yaitu berdasarkan fenomena-fenomena yang terjadi di sektor perekonomian", explanation: "" },
   { id: 400, version: 4, category: "Regulasi Perbankan", question: "BPR XYZ telah diberikan perpanjangan jangka waktu pengawasan intensif dan akan berakhir pada tanggal 2 November 2021. Apabila sampai dengan batas waktu perpanjangan tersebut berakhir tidak terdapat peningkatan kondisi keuangan dan rasio KPMM berada pada posisi 9%, maka:", options: ["Jawaban tidak ada yang sesuai.", "OJK menetapkan perpanjangan jangka waktu pengawasan intensif.", "OJK meminta BPR untuk menyusun rencana tindak (action plan).", "OJK menetapkan BPR dalam pengawasan khusus."], answer: "OJK menetapkan BPR dalam pengawasan khusus.", explanation: "" }
 ];
+
 
 
 
