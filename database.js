@@ -2,6 +2,7 @@
 // Untuk menambah atau mengubah soal, cukup edit di file ini.
 
 const questions = [
+  // SOAL VERSI 1
   {
     id: 1,
     paket: 1,
@@ -5605,6 +5606,7 @@ const questions = [
     "explanation": ""
   }
 ];
+
 
 
 
