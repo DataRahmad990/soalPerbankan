@@ -228,10 +228,12 @@
                     const groupEnd = Math.min(groupStart + 24, totalQuestionsInQuiz);
                     
                     // ================= PERUBAHAN 2: Membuat Label Versi Dinamis =================
-                    let versionText = '';
-                    if (groupStart === 101) versionText = 'SOAL VERSI 2';
-                    else if (groupStart === 201) versionText = 'SOAL VERSI 3'; // Contoh jika nanti ada versi 3
-                    else if (groupStart === 301) versionText = 'SOAL VERSI 4';
+            let versionText = '';
+            if (groupStart === 1) versionText = 'SOAL VERSI 1';
+            else if (groupStart === 101) versionText = 'SOAL VERSI 2';
+            else if (groupStart === 201) versionText = 'SOAL VERSI 3';
+            else if (groupStart === 301) versionText = 'SOAL VERSI 4';
+            else if (groupStart === 401) versionText = 'SOAL VERSI 13'; // Data dari file database.js yg kemarin
 
                     if (versionText) {
                         const separator = document.createElement('div');
@@ -475,3 +477,4 @@
 
 </body>
 </html>
+
