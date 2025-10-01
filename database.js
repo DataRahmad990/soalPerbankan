@@ -5347,8 +5347,286 @@ const questions = [
       "Pillar III: Market Disciplin"
     ],
     "answer": "Pillar III: Market Disciplin"
+  },
+  {
+    "id": 489,
+    "paket": 13,
+    "category": "Manajemen Risiko",
+    "question": "Prinsip-prinsip umum penetapan peringkat risiko BPR BPRS antara lain:",
+    "options": [
+      "Berorientasi Risiko, Proporsionalitas, Signifikansi dan Materialitas",
+      "Berorientasi Risiko, Proporsionalitas, Komprehensif dan Terstruktur",
+      "Berorientasi Risiko, Proporsionalitas, Signifikansi dan Materialitas, Komprehensif dan Terstruktur",
+      "Berorientasi Risiko, Signifikansi dan Materialitas, Komprehensif dan Terstruktur"
+    ],
+    "answer": "Berorientasi Risiko, Proporsionalitas, Signifikansi dan Materialitas, Komprehensif dan Terstruktur"
+  },
+  {
+    "id": 490,
+    "paket": 13,
+    "category": "Perizinan",
+    "question": "OJK dapat menghentikan penilaian kemampuan dan kepatutan pihak utama BPR atau BPR Syariah apabila",
+    "options": [
+      "Sedang menjalani proses penilaian kemampuan dan kepatutan pada suatu LJK",
+      "LJK yang bersangkutan sedang dalam status pengawasan BDP",
+      "LJK yang bersangkutan sedang dalam status pengawasan BSS",
+      "Sedang menjalani pemeriksaan BPYC"
+    ],
+    "answer": "Sedang menjalani proses penilaian kemampuan dan kepatutan pada suatu LJK"
+  },
+  {
+    "id": 491,
+    "paket": 13,
+    "category": "Perbankan",
+    "question": "Berikut ini merupakan tantangan dalam konsolidasi BPR/BPRS, kecuali",
+    "options": [
+      "PSP umumnya tidak mau mempertahankan kepemilikannya pada 1 BPR dan BPRS",
+      "Tidak terdapat pembatasan pemilikan saham BPR/BPRS",
+      "Pemilik BPR/BPRS cenderung mempertahankan kepemilikan dan merasa mampu mengatasi permasalahan BPR/BPRS",
+      "Belum adanya keterlibatan pihak ketiga (Investor/Penyedia Jasa)"
+    ],
+    "answer": "PSP umumnya tidak mau mempertahankan kepemilikannya pada 1 BPR dan BPRS"
+  },
+  {
+    "id": 492,
+    "paket": 13,
+    "category": "Akuntansi",
+    "question": "Standar akuntansi keuangan terdiri dari, kecuali:",
+    "options": [
+      "Pernyataan standar akuntansi keuangan",
+      "Interpretasi standar akuntansi keuangan",
+      "Standar profesional akuntan publik",
+      "Pernyataan pencabutan standar akuntansi keuangan"
+    ],
+    "answer": "Standar profesional akuntan publik"
+  },
+  {
+    "id": 493,
+    "paket": 13,
+    "category": "Pengawasan",
+    "question": "Pengawasan Bank yang menggunakan strategi dan metodologi berdasarkan risiko yang memungkinkan pengawas Bank untuk mendeteksi risiko yang signifikan secara dini dan mengambil tindakan pengawasan yang sesuai dan tepat waktu merupakan definisi dari",
+    "options": [
+      "Pengawasan Bank Berbasis Risiko",
+      "Integrated Supervisory Plan",
+      "Risk Assessment",
+      "Supervisory Review Process"
+    ],
+    "answer": "Pengawasan Bank Berbasis Risiko"
+  },
+  {
+    "id": 494,
+    "paket": 13,
+    "category": "Pengawasan KK",
+    "question": "Peraturan OJK yang mengatur tentang Konglomerasi Keuangan dan Perusahaan Induk Konglomerasi Keuangan, diatur di dalam POJK:",
+    "options": [
+      "POJK 45 Tahun 2020",
+      "POJK 30 Tahun 2024",
+      "POJK 17 Tahun 2014",
+      "POJK 18 Tahun 2014"
+    ],
+    "answer": "POJK 30 Tahun 2024"
+  },
+  {
+    "id": 495,
+    "paket": 13,
+    "category": "Syariah",
+    "question": "Penilaian Kemampuan dan Kepatutan diberlakukan bagi pihak yang mengajukan diri untuk menduduki posisi sebagai berikut di bank syariah, kecuali:",
+    "options": [
+      "Direksi",
+      "Dewan Komisaris",
+      "Pemegang Saham Pengendali",
+      "Pengawas Syariah"
+    ],
+    "answer": "Pengawas Syariah"
+  },
+  {
+    "id": 496,
+    "paket": 13,
+    "category": "Perizinan",
+    "question": "Produk dasar bank umum meliputi:",
+    "options": [
+      "Penghimpunan dana, penyaluran dana, dan kegiatan treasury.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan valuta asing.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan sederhana lainnya.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan trust."
+    ],
+    "answer": "Penghimpunan dana, penyaluran dana, dan kegiatan sederhana lainnya."
+  },
+  {
+    "id": 497,
+    "paket": 13,
+    "category": "Organisasi OJK",
+    "question": "Pengawasan Sektor Jasa Keuangan Daerah meliputi bidang:",
+    "options": [
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD), serta perilaku Pelaku Usaha Jasa Keuangan (PUJK)"
+    ],
+    "answer": "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD), serta perilaku Pelaku Usaha Jasa Keuangan (PUJK)"
+  },
+  {
+    "id": 498,
+    "paket": 13,
+    "category": "Tata Kelola",
+    "question": "Pengumuman laporan publikasi keuangan dan informasi kinerja keuangan tahunan bagi bank paling lambat dilaksanakan pada:",
+    "options": [
+      "1 bulan setelah akhir tahun buku",
+      "1 bulan setelah diterbitkannya laporan auditor independen",
+      "4 bulan setelah akhir tahun buku",
+      "3 bulan setelah akhir tahun buku"
+    ],
+    "answer": "4 bulan setelah akhir tahun buku"
+  },
+  {
+    "id": 499,
+    "paket": 13,
+    "category": "SLIK/LPIP",
+    "question": "Pada POJK LPIP, pasal berapa yang menyebutkan bahwa LPIP diminta untuk menghasilkan informasi perkreditan yang memiliki nilai tambah?",
+    "options": [
+      "Pasal 61 ayat 3",
+      "Pasal 60 ayat 3",
+      "Pasal 60 ayat 1",
+      "Pasal 61 ayat 1"
+    ],
+    "answer": "Pasal 61 ayat 1"
+  },
+  {
+    "id": 500,
+    "paket": 13,
+    "category": "Teknologi Informasi",
+    "question": "Sistem Pelaporan yang digunakan bank untuk menyampaikan laporan kepada OJK yaitu:",
+    "options": [
+      "OJK-PR",
+      "OJK-PR",
+      "SLIK",
+      "APOLO"
+    ],
+    "answer": "APOLO"
   }
 ];
+    ],
+    "answer": "PSP umumnya tidak mau mempertahankan kepemilikannya pada 1 BPR dan BPRS"
+  },
+  {
+    "id": 92,
+    "paket": 13,
+    "category": "Akuntansi",
+    "question": "Standar akuntansi keuangan terdiri dari, kecuali:",
+    "options": [
+      "Pernyataan standar akuntansi keuangan",
+      "Interpretasi standar akuntansi keuangan",
+      "Standar profesional akuntan publik",
+      "Pernyataan pencabutan standar akuntansi keuangan"
+    ],
+    "answer": "Standar profesional akuntan publik"
+  },
+  {
+    "id": 93,
+    "paket": 13,
+    "category": "Pengawasan",
+    "question": "Pengawasan Bank yang menggunakan strategi dan metodologi berdasarkan risiko yang memungkinkan pengawas Bank untuk mendeteksi risiko yang signifikan secara dini dan mengambil tindakan pengawasan yang sesuai dan tepat waktu merupakan definisi dari",
+    "options": [
+      "Pengawasan Bank Berbasis Risiko",
+      "Integrated Supervisory Plan",
+      "Risk Assessment",
+      "Supervisory Review Process"
+    ],
+    "answer": "Pengawasan Bank Berbasis Risiko"
+  },
+  {
+    "id": 94,
+    "paket": 13,
+    "category": "Pengawasan KK",
+    "question": "Peraturan OJK yang mengatur tentang Konglomerasi Keuangan dan Perusahaan Induk Konglomerasi Keuangan, diatur di dalam POJK:",
+    "options": [
+      "POJK 45 Tahun 2020",
+      "POJK 30 Tahun 2024",
+      "POJK 17 Tahun 2014",
+      "POJK 18 Tahun 2014"
+    ],
+    "answer": "POJK 30 Tahun 2024"
+  },
+  {
+    "id": 95,
+    "paket": 13,
+    "category": "Syariah",
+    "question": "Penilaian Kemampuan dan Kepatutan diberlakukan bagi pihak yang mengajukan diri untuk menduduki posisi sebagai berikut di bank syariah, kecuali:",
+    "options": [
+      "Direksi",
+      "Dewan Komisaris",
+      "Pemegang Saham Pengendali",
+      "Pengawas Syariah"
+    ],
+    "answer": "Pengawas Syariah"
+  },
+  {
+    "id": 96,
+    "paket": 13,
+    "category": "Perizinan",
+    "question": "Produk dasar bank umum meliputi:",
+    "options": [
+      "Penghimpunan dana, penyaluran dana, dan kegiatan treasury.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan valuta asing.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan sederhana lainnya.",
+      "Penghimpunan dana, penyaluran dana, dan kegiatan trust."
+    ],
+    "answer": "Penghimpunan dana, penyaluran dana, dan kegiatan sederhana lainnya."
+  },
+  {
+    "id": 97,
+    "paket": 13,
+    "category": "Organisasi OJK",
+    "question": "Pengawasan Sektor Jasa Keuangan Daerah meliputi bidang:",
+    "options": [
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP)",
+      "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD), serta perilaku Pelaku Usaha Jasa Keuangan (PUJK)"
+    ],
+    "answer": "Perbankan, Pasar Modal, Keuangan Derivatif dan Bursa Karbon (PMDK), Perasuransian, Penjaminan, dan Dana Pensiun (PPDP), Lembaga Pembiayaan, Perusahaan Modal Ventura, Lembaga Keuangan Mikro, dan Lembaga Jasa Keuangan Lainnya (PVML), Inovasi Teknologi Sektor Keuangan, Aset Keuangan Digital dan Aset Kripto (IAKD), serta perilaku Pelaku Usaha Jasa Keuangan (PUJK)"
+  },
+  {
+    "id": 98,
+    "paket": 13,
+    "category": "Tata Kelola",
+    "question": "Pengumuman laporan publikasi keuangan dan informasi kinerja keuangan tahunan bagi bank paling lambat dilaksanakan pada:",
+    "options": [
+      "1 bulan setelah akhir tahun buku",
+      "1 bulan setelah diterbitkannya laporan auditor independen",
+      "4 bulan setelah akhir tahun buku",
+      "3 bulan setelah akhir tahun buku"
+    ],
+    "answer": "4 bulan setelah akhir tahun buku"
+  },
+  {
+    "id": 99,
+    "paket": 13,
+    "category": "SLIK/LPIP",
+    "question": "Pada POJK LPIP, pasal berapa yang menyebutkan bahwa LPIP diminta untuk menghasilkan informasi perkreditan yang memiliki nilai tambah?",
+    "options": [
+      "Pasal 61 ayat 3",
+      "Pasal 60 ayat 3",
+      "Pasal 60 ayat 1",
+      "Pasal 61 ayat 1"
+    ],
+    "answer": "Pasal 61 ayat 1"
+  },
+  {
+    "id": 100,
+    "paket": 13,
+    "category": "Teknologi Informasi",
+    "question": "Sistem Pelaporan yang digunakan bank untuk menyampaikan laporan kepada OJK yaitu:",
+    "options": [
+      "OJK-PR",
+      "OJK-PR",
+      "SLIK",
+      "APOLO"
+    ],
+    "answer": "APOLO"
+  }
+];
+
 
 
 
