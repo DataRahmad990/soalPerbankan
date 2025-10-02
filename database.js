@@ -678,7 +678,7 @@ const questions = [
       "2 (dua) bank syariah lain",
       "4 (empat) lembaga keuangan syariah lain",
     ],
-    answer: "4 (empat) bank syariah lain",
+    answer: "4 (empat) lembaga keuangan syariah lain", 
   },
   {
     id: 53,
@@ -704,7 +704,7 @@ const questions = [
       "Persetujuan prinsip dan persetujuan penutupan",
       "Persetujuan prinsip dan persetujuan pencabutan izin usaha",
     ],
-    answer: "Persetujuan prinsip dan persetujuan pencabutan izin usaha",
+    answer: "Persetujuan persiapan dan persetujuan pencabutan izin usaha",
   },
   {
     id: 55,
@@ -855,7 +855,7 @@ const questions = [
       "Semua salah",
     ],
     answer:
-      "Penyediaan modal UMKM melalui pembiayaan bersama yang dapat diakses secara online",
+      "Penyediaan modal UMKM melalui penawaran efek yang dapat diakses secara online",
   },
   {
     id: 68,
@@ -878,7 +878,7 @@ const questions = [
     question:
       "POJK mana yang mengatur tentang Pengembangan Kualitas Sumber Daya Manusia BPR/Syariah?",
     options: ["POJK 27/2016", "POJK 34/2018", "POJK 7/2024", "POJK 19/2023"],
-    answer: "POJK 34/2018",
+    answer: "POJK 19/2023",
   },
   {
     id: 70,
@@ -1049,7 +1049,7 @@ const questions = [
       "Memberikan keyakinan ketersediaan pasar atas komoditas dimaksud",
       "Memberikan keyakinan ketersediaan suplai komoditas di daerah secara signifikan",
     ],
-    answer: "Memberikan keyakinan kepada offtaker potensial yang bonafide",
+    answer: "Memberikan keyakinan komoditas memiliki basis di daerah",
   },
   {
     id: 83,
@@ -1084,7 +1084,7 @@ const questions = [
     question:
       "Berikut merupakan jenis jaringan kantor BPR berdasarkan POJK 7 Tahun 2024, kecuali",
     options: ["Unit Layanan Keliling", "Kantor Wilayah", "Sentra Keuangan Khusus"],
-    answer: "Unit Layanan Keliling",
+    answer: "Kantor Wilayah",
   },
   {
     id: 86,
@@ -5504,6 +5504,7 @@ const questions = [
     "answer": "APOLO"
   }
 ];
+
 
 
 
