@@ -5503,7 +5503,7 @@ const questions = [
     ],
     "answer": "APOLO"
   },
-  [
+  // soal paket 6
     {
         "id": 501,
         "version": 6,
@@ -6809,6 +6809,7 @@ const questions = [
         "answer": "Daftar AP yang Aktif"
     }
 ];
+
 
 
 
