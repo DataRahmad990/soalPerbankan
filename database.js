@@ -10711,8 +10711,22 @@ const questions = [
       "Tingkat suku bunga"
     ],
     "answer": "Tingkat suku bunga"
+  },
+  {
+    "id": 900,
+    "version": 10,
+    "category": "Regulasi dan Pengawasan Perbankan",
+    "question": "Kantor OJK Provinsi Jawa Tengah membawahi wilayah:",
+    "options": [
+      "Kantor OJK Prov. DI Yogyakarta, Kantor OJK Purwokerto, Kantor OJK Malang, dan Kantor OJK Tegal",
+      "Kantor OJK Prov. DI Yogyakarta, Kantor OJK Purwokerto, Kantor OJK Solo, dan Kantor OJK Tegal",
+      "Kantor OJK Prov. DI Yogyakarta, Kantor OJK Purwokerto, Kantor OJK Solo, dan Kantor OJK Kediri",
+      "Kantor OJK Prov. DI Yogyakarta, Kantor OJK Jember, Kantor OJK Solo, dan Kantor OJK Tegal"
+    ],
+    "answer": "Kantor OJK Prov. DI Yogyakarta, Kantor OJK Purwokerto, Kantor OJK Solo, dan Kantor OJK Tegal"
   }
 ];
+
 
 
 
