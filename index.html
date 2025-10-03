@@ -61,6 +61,10 @@
                         <option value="all">Semua Kategori</option>
                     </select>
                 </div>
+                <div class="mb-4">
+    <label for="search-input" class="block text-sm font-medium text-gray-700 mb-2">Cari Soal:</label>
+    <input type="text" id="search-input" placeholder="Ketik kata kunci soal..." class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5">
+</div>
 
                 <div id="question-navigation" class="max-h-[500px] overflow-y-auto pr-2">
                 </div>
@@ -162,6 +166,7 @@
             const showResultsBtn = document.getElementById('show-results-btn');
             const closeModalBtn = document.getElementById('close-modal-btn');
             const resetProgressBtn = document.getElementById('reset-progress-btn');
+            const searchInput = document.getElementById('search-input');
 
             function saveProgress() {
                 localStorage.setItem('quizUserAnswers', JSON.stringify(userAnswers));
@@ -200,6 +205,7 @@
                 
                 renderNavigation();
                 categoryFilter.addEventListener('change', renderNavigation);
+                searchInput.addEventListener('input', renderNavigation);
                 showResultsBtn.addEventListener('click', showResults);
                 closeModalBtn.addEventListener('click', () => resultsModal.classList.add('hidden'));
                 resetProgressBtn.addEventListener('click', resetProgress);
@@ -216,83 +222,117 @@
                 displayQuestion(id);
             }
 
-            function renderNavigation() {
-                questionNavigation.innerHTML = '';
-                const selectedCategory = categoryFilter.value;
-                const filteredQuestions = questions.filter(q => selectedCategory === 'all' || q.category === selectedCategory);
+            
+function renderNavigation() {
+    questionNavigation.innerHTML = '';
+    const selectedCategory = categoryFilter.value;
+    const searchQuery = searchInput.value.trim().toLowerCase();
+
+    // Jika ada query pencarian (lebih dari 2 huruf), tampilkan hasil search
+    if (searchQuery.length > 2) {
+        renderSearchResults(searchQuery);
+    } 
+    // Jika tidak, tampilkan navigasi grid seperti biasa
+    else {
+        const filteredQuestions = questions.filter(q => selectedCategory === 'all' || q.category === selectedCategory);
+        const totalQuestionsInQuiz = Math.max(...questions.map(q => q.id));
+
+        for (let groupStart = 1; groupStart <= totalQuestionsInQuiz; groupStart += 100) {
+            const versionNumber = questions.find(q => q.id >= groupStart)?.version;
+            if (!versionNumber) continue;
+
+            // Cek apakah ada soal di versi ini setelah difilter
+            const questionsInVersion = filteredQuestions.filter(q => q.version === versionNumber);
+            if (questionsInVersion.length === 0 && selectedCategory !== 'all') continue;
+            
+            // --- Membuat Label Versi Dinamis ---
+            const separator = document.createElement('div');
+            separator.className = 'w-full my-4 py-2 text-center bg-slate-200 text-slate-800 font-bold rounded-lg text-sm';
+            separator.textContent = `SOAL VERSI ${versionNumber}`;
+            questionNavigation.appendChild(separator);
+
+            for (let subGroupStart = groupStart; subGroupStart < groupStart + 100; subGroupStart += 25) {
+                const subGroupEnd = Math.min(subGroupStart + 24, groupStart + 99);
                 
-                // ================= PERUBAHAN 1: Membuat Total Soal Dinamis =================
-                const totalQuestionsInQuiz = Math.max(...questions.map(q => q.id));
+                const questionsInGroupForFilter = filteredQuestions.filter(q => q.id >= subGroupStart && q.id <= subGroupEnd);
+                if (questionsInGroupForFilter.length === 0 && selectedCategory !== 'all') continue;
 
-                for (let groupStart = 1; groupStart <= totalQuestionsInQuiz; groupStart += 25) {
-                    const groupEnd = Math.min(groupStart + 24, totalQuestionsInQuiz);
+                const groupContainer = document.createElement('div');
+                const header = document.createElement('h4');
+                header.textContent = `Soal ${subGroupStart} - ${subGroupEnd}`;
+                header.className = 'text-sm font-semibold text-gray-600 mt-4 pb-1 border-b';
+                if (subGroupStart === groupStart) header.classList.remove('mt-4');
+                groupContainer.appendChild(header);
+
+                const gridContainer = document.createElement('div');
+                gridContainer.className = 'grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-5 gap-2 pt-2';
+
+                for (let i = subGroupStart; i <= subGroupEnd; i++) {
+                    const questionData = questions.find(q => q.id === i);
+                    if (!questionData) continue;
                     
-                    // ================= PERUBAHAN 2: Membuat Label Versi Dinamis =================
-            let versionText = '';
-            if (groupStart === 1) versionText = 'SOAL VERSI 1';
-            else if (groupStart === 101) versionText = 'SOAL VERSI 2';
-            else if (groupStart === 201) versionText = 'SOAL VERSI 3';
-            else if (groupStart === 301) versionText = 'SOAL VERSI 4';
-            else if (groupStart === 401) versionText = 'SOAL VERSI 13'; // Data dari file database.js yg kemarin
-            else if (groupStart === 501) versionText = 'SOAL VERSI 6';
-            else if (groupStart === 601) versionText = 'SOAL VERSI 8';
-            else if (groupStart === 701) versionText = 'SOAL VERSI 9';
-
-                    if (versionText) {
-                        const separator = document.createElement('div');
-                        separator.className = 'w-full my-4 py-2 text-center bg-slate-200 text-slate-800 font-bold rounded-lg text-sm';
-                        separator.textContent = versionText;
-                        questionNavigation.appendChild(separator);
-                    }
-                    
-                    const questionsInGroupForFilter = filteredQuestions.filter(q => q.id >= groupStart && q.id <= groupEnd);
-
-                    if (selectedCategory !== 'all' && questionsInGroupForFilter.length === 0 && (groupStart < 301 || groupStart > 400) ) continue;
-
-                    const groupContainer = document.createElement('div');
-                    const header = document.createElement('h4');
-                    header.textContent = `Soal ${groupStart} - ${groupEnd}`;
-                    header.className = 'text-sm font-semibold text-gray-600 mt-4 pb-1 border-b';
-                    if (groupStart === 1 || groupStart === 101 || groupStart === 301) header.classList.remove('mt-4'); // Hapus margin atas untuk header pertama/versi baru
-                    groupContainer.appendChild(header);
-
-                    const gridContainer = document.createElement('div');
-                    gridContainer.className = 'grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-5 gap-2 pt-2';
-
-                    for (let i = groupStart; i <= groupEnd; i++) {
-                        const questionData = questions.find(q => q.id === i);
-
-                        if (selectedCategory === 'all' || (questionData && questionsInGroupForFilter.some(q => q.id === i))) {
-                            const navItem = document.createElement('div');
-                            navItem.textContent = i;
-                            navItem.className = 'w-10 h-10 flex items-center justify-center font-bold rounded-md shadow-sm';
-
-                            if (questionData) {
-                                navItem.classList.add('question-nav-item', 'cursor-pointer');
-                                if (userAnswers[i]) {
-                                    navItem.classList.add(userAnswers[i].isCorrect ? 'bg-green-500' : 'bg-red-500', 'text-white');
-                                } else {
-                                    navItem.classList.add('bg-gray-200', 'text-gray-700');
-                                }
-                                if (i === currentQuestionId) navItem.classList.add('ring-2', 'ring-blue-500', 'ring-offset-2');
-                                
-                                if (flaggedQuestions.includes(i)) {
-                                    const flagIcon = document.createElement('span');
-                                    flagIcon.textContent = '🚩';
-                                    flagIcon.className = 'flag-indicator';
-                                    navItem.appendChild(flagIcon);
-                                }
-                                navItem.addEventListener('click', () => displayQuestion(i));
-                            } else {
-                                navItem.classList.add('bg-gray-50', 'text-gray-300', 'cursor-not-allowed');
-                            }
-                            gridContainer.appendChild(navItem);
+                    if (selectedCategory === 'all' || questionsInGroupForFilter.some(q => q.id === i)) {
+                        const navItem = document.createElement('div');
+                        navItem.textContent = i;
+                        navItem.className = 'w-10 h-10 flex items-center justify-center font-bold rounded-md shadow-sm';
+                        
+                        navItem.classList.add('question-nav-item', 'cursor-pointer');
+                        if (userAnswers[i]) {
+                            navItem.classList.add(userAnswers[i].isCorrect ? 'bg-green-500' : 'bg-red-500', 'text-white');
+                        } else {
+                            navItem.classList.add('bg-gray-200', 'text-gray-700');
                         }
+                        if (i === currentQuestionId) navItem.classList.add('ring-2', 'ring-blue-500', 'ring-offset-2');
+                        
+                        if (flaggedQuestions.includes(i)) {
+                            const flagIcon = document.createElement('span');
+                            flagIcon.textContent = '🚩';
+                            flagIcon.className = 'flag-indicator';
+                            navItem.appendChild(flagIcon);
+                        }
+                        navItem.addEventListener('click', () => displayQuestion(i));
+                        gridContainer.appendChild(navItem);
                     }
-                    groupContainer.appendChild(gridContainer);
-                    questionNavigation.appendChild(groupContainer);
                 }
+                groupContainer.appendChild(gridContainer);
+                questionNavigation.appendChild(groupContainer);
             }
+        }
+    }
+}
+
+
+function renderSearchResults(query) {
+    const results = questions.filter(q => q.question.toLowerCase().includes(query));
+    
+    if (results.length === 0) {
+        questionNavigation.innerHTML = `<p class="text-gray-500 text-center p-4">Tidak ada soal yang cocok.</p>`;
+        return;
+    }
+
+    results.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'p-3 border-b hover:bg-gray-100 cursor-pointer transition-colors';
+        
+        // Highlight kata kunci yang dicari
+        const regex = new RegExp(query, 'gi');
+        const highlightedText = result.question.replace(regex, `<mark class="bg-yellow-200 px-1 rounded">${query}</mark>`);
+
+        resultItem.innerHTML = `
+            <p class="font-bold text-sm text-blue-600">Soal #${result.id} (Versi ${result.version})</p>
+            <p class="text-sm text-gray-700 mt-1">${highlightedText}</p>
+        `;
+        
+        resultItem.addEventListener('click', () => {
+            displayQuestion(result.id);
+            // Optional: Hapus teks pencarian setelah diklik
+            searchInput.value = '';
+            renderNavigation(); // Kembali ke tampilan grid biasa
+        });
+        
+        questionNavigation.appendChild(resultItem);
+    });
+}
             
             function handleOptionSelect(question, selectedOption) {
                 if (userAnswers[question.id]) return;
@@ -480,6 +520,7 @@
 
 </body>
 </html>
+
 
 
 
